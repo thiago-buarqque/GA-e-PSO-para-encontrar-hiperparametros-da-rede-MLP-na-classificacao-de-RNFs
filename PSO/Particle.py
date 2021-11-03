@@ -39,7 +39,7 @@ class Particle:
         for i in range(dimension):
 
             if i == batch_size_idx:
-                # Kennery and Eberhart PSO adaptation (BPSO)
+                # Kennedy and Eberhart PSO adaptation (BPSO)
                 r = random.uniform(0, 1)
                 if r < sigmoid(self.velocities[i]):
                     self.positions[i] = 32

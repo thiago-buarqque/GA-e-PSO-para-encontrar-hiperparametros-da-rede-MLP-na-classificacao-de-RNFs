@@ -41,9 +41,6 @@ class GAHyperparametersTuning:
         dropout = individual[4]
         batch_size = individual[5]
 
-        print(f'Indo avaliar:'
-              f' [{opt_algorithm}, {hidden_func}, {hidden_size}, {learning_rate}, {dropout}, {batch_size}]')
-
         return train_model(
             X,
             Y,

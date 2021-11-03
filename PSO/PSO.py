@@ -35,7 +35,6 @@ class PSO:
     def initialize_swarm(self):
         integer_values_indexes = [0, 1, 2, 5]
 
-        # hidden_layer_2_size_idx = 3
         learning_rate_idx = 3
         dropout_idx = 4
         batch_size_idx = 5
@@ -75,6 +74,7 @@ class PSO:
             iteration_fitnesses = []
 
             fitnesses = list(pool.map(self.fitness_function, self.swarm))
+            # Calculate fitness
             for j, particle_result in enumerate(fitnesses):
                 self.swarm[j].fitness = particle_result[1]
                 if particle_result[1] > self.swarm[j].fitness_pbest:
